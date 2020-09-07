@@ -1,0 +1,105 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+
+  &__item {
+    grid-area: auto;
+    border: 1px solid $color-text-300;
+  }
+  &__item,
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__image {
+    position: relative;
+    background: $color-bg-secondary;
+
+    img {
+      mix-blend-mode: darken;
+      object-fit: contain;
+      margin: auto;
+      height: 240px;
+    }
+  }
+  &__btn-table {
+    @include font-tiny;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    padding: 5px 16px;
+    background: $color-bg-default;
+    border: 1px solid $color-text-300;
+
+    &:hover {
+      color: $color-text-700;
+    }
+  }
+  &__text-wrapper {
+    height: 100%;
+    justify-content: space-between;
+  }
+  &__text {
+    padding: 16px 16px 24px;
+  }
+  &__title {
+    margin-bottom: 8px;
+  }
+  &__desc {
+    margin-bottom: 8px;
+  }
+  &__doc {
+    position: relative;
+    @include font-small;
+    color: $color-brand-default;
+    padding-left: 28px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 0;
+      background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z' fill='%230061E0'/%3E%3C/svg%3E")
+        no-repeat center;
+      transition: transform 0.2s ease-in-out;
+    }
+    &:hover {
+      opacity: 0.8;
+
+      &::after {
+        transform: translateY(4px);
+      }
+    }
+  }
+  &__btn-request {
+    @include button-primary;
+    @include font-subtitle;
+    width: calc(100% - 32px);
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    align-self: center;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .products {
+    &__image {
+      img {
+        height: 214px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1128px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-row-gap: 24px;
+  }
+}
