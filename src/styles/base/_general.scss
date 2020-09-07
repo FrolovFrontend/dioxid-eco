@@ -52,20 +52,33 @@ button {
 
 body {
   @include font-body;
-  -webkit-font-smoothing: antialiased;
+  color: $color-text-900;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: $color-bg-default;
+  min-height: 1500px;
 
   &.lock {
     overflow: hidden;
   }
 }
 
-.test-container {
+.container {
   @include container;
-  height: 200px;
-  background-color: rgb(119, 117, 255);
+}
 
-  p {
-    background-color: rgb(132, 156, 223);
-  }
+h1 {
+  @include font-h1;
+}
+
+h2 {
+  @include font-h2;
+}
+
+h3 {
+  @include font-h3;
+}
+
+p {
+  @include font-paragraph;
 }
