@@ -1,3 +1,4 @@
 import "%modules%/header/header";
 import "%modules%/about-dioxid/about-dioxid";
-import "%modules%/footer/footer"
+import "%modules%/form/form";
+import "%modules%/footer/footer";

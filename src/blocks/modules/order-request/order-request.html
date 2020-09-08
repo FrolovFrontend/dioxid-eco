@@ -1,0 +1,57 @@
+<section class="order-request">
+  <div class="container">
+    <h2 class="order-request__heading">Заявка на&nbsp;заказ</h2>
+    <p class="order-request__desc">
+      Оставьте заявку на&nbsp;заказ и&nbsp;с&nbsp;вами свяжется специалист,
+      чтобы уточнить детали и&nbsp;ответить на&nbsp;ваши вопросы
+    </p>
+
+    <form class="order-request__form form" action="#" method="POST">
+      <div class="form__fields">
+        <div class="form__inputs">
+          <label class="form__input-wrap">
+            <input class="form__input" type="text" name="name" required />
+            <span class="form__placeholder">Ваше имя*</span>
+          </label>
+          <label class="form__input-wrap">
+            <input class="form__input" type="text" required />
+            <span class="form__placeholder">Организация*</span>
+          </label>
+          <label class="form__input-wrap">
+            <input class="form__input" type="text" name="phone" required />
+            <span class="form__placeholder">Телефон*</span>
+          </label>
+          <label class="form__input-wrap">
+            <input class="form__input" type="text" name="E-mail" required />
+            <span class="form__placeholder">E-mail*</span>
+          </label>
+        </div>
+        <label class="form__input-wrap">
+          <textarea
+            class="form__input form__input--message"
+            name=""
+            id=""
+          ></textarea>
+          <span class="form__placeholder">Сообщение</span>
+        </label>
+      </div>
+
+      <div class="form__file">
+        <input type="file" id="upload-file" />
+        <label for="upload-file">
+          <span class="form__attach">Прикрепить файл</span>
+          <span class="form__attach-files">Файл не выбран</span>
+        </label>
+      </div>
+
+      <div class="form__personal-data">
+        <input class="form__check" type="checkbox" id="personal-data" />
+        <label for="personal-data">
+          Cогласие на обработку моих персональных данных
+        </label>
+      </div>
+
+      <button class="form__btn" type="submit">Отправить</button>
+    </form>
+  </div>
+</section>

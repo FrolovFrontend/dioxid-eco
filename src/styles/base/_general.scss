@@ -40,6 +40,10 @@ button,
 textarea,
 select {
   font: inherit;
+  border-radius: unset;
+}
+textarea {
+  resize: none;
 }
 
 button {
@@ -52,6 +56,8 @@ button {
 
 body {
   @include font-body;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   color: $color-text-900;
   background: $color-bg-default;
   min-height: 5500px;
