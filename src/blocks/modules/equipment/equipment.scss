@@ -53,5 +53,9 @@
 @media all and (max-width: 600px) {
   .equipment {
     padding-top: 64px;
+
+    &__item {
+      padding-left: 22px;
+    }
   }
 }
