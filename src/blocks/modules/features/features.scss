@@ -1,0 +1,197 @@
+.features {
+  padding-top: 96px;
+
+  &__heading {
+    margin-bottom: 24px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
+  &__item {
+    min-height: 220px;
+    border: 1px solid $color-text-300;
+  }
+  &__content {
+    position: relative;
+    padding: 32px 32px 32px 160px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 104px;
+      height: 104px;
+      left: 32px;
+      top: 32px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &--safety {
+      &::before {
+        background-image: url("../img/features/features-safety.svg");
+      }
+    }
+    &--reliability {
+      &::before {
+        background-image: url("../img/features/features-reliability.svg");
+      }
+    }
+    &--efficiency {
+      &::before {
+        background-image: url("../img/features/features-efficiency.svg");
+      }
+    }
+    &--universality {
+      &::before {
+        background-image: url("../img/features/features-universality.svg");
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 8px;
+  }
+  &__desc {
+    color: $color-text-700;
+  }
+}
+
+.features-banner {
+  margin: 64px 0;
+  padding: 64px 0;
+  background: $color-brand-default;
+  color: $color-text-white;
+
+  &__content {
+    max-width: 1000px;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__btn {
+    @include button-white;
+    padding: 14px 40px;
+  }
+}
+
+.rivals {
+  &__heading {
+    margin-bottom: 32px;
+  }
+  &__list {
+    max-width: 824px;
+  }
+  &__item {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__content {
+    position: relative;
+    padding: 0 0 0 136px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 80px;
+      top: 0;
+      left: 0;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &--hydrogen {
+      &::before {
+        background-image: url("../img/features/rivals-hydrogen.svg");
+      }
+    }
+    &--sodium {
+      &::before {
+        background-image: url("../img/features/rivals-sodium.svg");
+      }
+    }
+    &--phenol {
+      &::before {
+        background-image: url("../img/features/rivals-phenol.svg");
+      }
+    }
+  }
+  &__title {
+    @include font-subtitle;
+    color: $color-brand-default;
+    margin-bottom: 8px;
+  }
+  &__desc {
+    margin-bottom: 16px;
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media all and (max-width: 1128px) {
+  .features {
+    &__list {
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+    }
+    &__content {
+      padding: 138px 24px 24px 24px;
+
+      &::before {
+        width: 90px;
+        height: 90px;
+        left: 24px;
+        top: 24px;
+      }
+    }
+  }
+  .rivals {
+    &__list {
+      max-width: 627px;
+    }
+    &__content {
+      position: relative;
+      padding: 88px 0 0 0;
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .features {
+    padding-top: 64px;
+
+    &__list {
+      grid-template-columns: 1fr;
+      grid-row-gap: 16px;
+    }
+    &__content {
+      padding: 122px 16px 16px 16px;
+
+      &::before {
+        left: 16px;
+        top: 16px;
+      }
+    }
+  }
+  .features-banner {
+    margin: 40px 0;
+    padding: 40px 0;
+  }
+  .rivals {
+    &__heading {
+      margin-bottom: 24px;
+    }
+    &__desc {
+      margin-bottom: 12px;
+    }
+  }
+}

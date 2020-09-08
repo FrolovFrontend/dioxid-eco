@@ -53,8 +53,6 @@ button {
 body {
   @include font-body;
   color: $color-text-900;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   background: $color-bg-default;
   min-height: 5500px;
 
