@@ -62,5 +62,7 @@
     "webpack": "^4.30.0",
     "webpack-stream": "^5.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^6.2.0"
+  }
 }
