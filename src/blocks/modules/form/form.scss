@@ -101,8 +101,9 @@
     opacity: 0;
 
     & + label {
+      @include font-small;
       display: inline-flex;
-      align-items: center;
+      align-items: flex-start;
       user-select: none;
       cursor: pointer;
 
@@ -147,10 +148,70 @@
       background-color: $color-text-300;
     }
   }
+  &__personal-link {
+    font-family: "Rolleston Display";
+    color: $color-brand-default;
+    text-decoration: underline;
+  }
   &__btn {
     @include button-primary;
     @include font-subtitle;
     padding: 14px 40px;
     margin-top: 24px;
+  }
+}
+
+@media all and (max-width: 1128px) {
+  .form {
+    &__fields {
+      grid-template-columns: 1fr;
+      max-width: 628px;
+
+      .form__input-wrap {
+        margin-bottom: 16px;
+      }
+    }
+    &__inputs {
+      margin-bottom: 16px;
+    }
+    &__input--message {
+      height: 200px;
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .form {
+    &__fields {
+      .form__input-wrap {
+        margin-bottom: 8px;
+      }
+    }
+    &__inputs {
+      margin-bottom: 8px;
+    }
+    &__file label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__check + label,
+    &__file label {
+      flex-wrap: wrap;
+    }
+    &__attach {
+      margin-bottom: 16px;
+    }
+    &__attach-files {
+      margin-left: 0;
+    }
+  }
+}
+
+@media all and (max-width: 432px) {
+  .form {
+    &__personal-link {
+      padding-left: 37px;
+    }
   }
 }

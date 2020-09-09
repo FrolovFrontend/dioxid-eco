@@ -7,8 +7,19 @@
     margin-bottom: 8px;
   }
   &__desc {
+    @include font-subtitle;
+    font-family: "Formular";
     margin-bottom: 32px;
     max-width: 688px;
+    color: $color-text-700;
+  }
+}
+
+@media all and (max-width: 1128px) {
+  .order-request {
+    &__desc {
+      max-width: 628px;
+    }
   }
 }
 
