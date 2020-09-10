@@ -63,6 +63,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^6.2.0"
   }
 }
