@@ -78,43 +78,33 @@
 
 @media all and (max-width: 600px) {
   .footer {
-    padding: 24px 0 16px;
-    background: $color-bg-secondary;
+    padding: 24px 0;
 
     &__top,
-    &__bottom {
-      display: flex;
-      justify-content: space-between;
+    &__bottom,
+    &__info {
+      flex-direction: column;
     }
     &__top {
       margin-bottom: 40px;
     }
     &__text {
-      &--prev {
-        max-width: 430px;
-      }
-      &--copy,
-      &--personal {
-        color: $color-text-700;
-      }
       &--copy {
-        margin-right: 24px;
-      }
-      &--personal {
-        
+        margin-bottom: 8px;
       }
     }
     &__contacts {
-      display: flex;
-      flex-direction: column;
+      margin-top: 16px;
     }
     &__contact {
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
-    &__dev {
-      display: block;
-      position: relative;
-      width: 100px;
-      height: 28px;
+    &__info {
+      display: flex;
+      margin-bottom: 32px;
     }
   }
 }
