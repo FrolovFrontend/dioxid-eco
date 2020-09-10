@@ -1,7 +1,7 @@
 @import "./accordion";
 
 .about-dioxid {
-  padding-top: 64px;
+  padding-top: 96px;
   background: $color-bg-secondary;
 
   &__prev {
@@ -69,7 +69,7 @@
 
 @media all and (max-width: 600px) {
   .about-dioxid {
-    padding-top: 40px;
+    padding-top: 64px;
 
     &__prev {
       grid-column-gap: 8px;

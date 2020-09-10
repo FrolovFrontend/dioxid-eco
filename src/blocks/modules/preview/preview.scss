@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    min-height: 500px;
+    min-height: 580px;
   }
   &__wrapper {
     display: grid;
@@ -97,16 +97,6 @@
     height: 144px;
     right: 32px;
     bottom: 40px;
-
-    &__logo {
-      display: block;
-      background-color: $color-bg-secondary;
-
-      &--tech {
-      }
-      &--sk {
-      }
-    }
   }
 }
 
@@ -114,6 +104,124 @@
   .preview {
     &::before {
       width: 35%;
+    }
+  }
+}
+
+@media all and (max-width: 1128px) {
+  .preview {
+    &::before {
+      width: 100%;
+      height: 30%;
+      top: unset;
+      right: unset;
+      left: 0;
+      bottom: 0;
+    }
+    &__wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      height: inherit;
+      align-items: flex-start;
+    }
+    &__text {
+      grid-area: auto;
+      padding-top: 24px;
+    }
+    &__anchors {
+      width: 440px;
+    }
+    &__image {
+      grid-area: auto;
+      max-height: 400px;
+
+      img {
+        object-position: left;
+      }
+    }
+    &__down {
+      left: 24px;
+      bottom: 24px;
+    }
+    &__logos {
+      right: 24px;
+      bottom: 24px;
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .preview {
+    position: relative;
+    height: calc(100vh - 49px);
+    margin-top: 49px;
+
+    &::before {
+      top: unset;
+      right: unset;
+      left: 0;
+      bottom: 0;
+    }
+    &__container {
+      min-height: 200px;
+    }
+    &__text {
+      grid-area: auto;
+    }
+    &__anchors {
+      margin-top: 8px;
+      width: 288px;
+    }
+    &__link {
+      font-size: 16px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    &__image {
+      grid-area: auto;
+      max-height: 220px;
+    }
+    &__down {
+      position: absolute;
+      width: 22px;
+      height: 40px;
+      left: 16px;
+      bottom: 16px;
+
+      &-link {
+        transition: transform 0.3s ease-in-out;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    &__logos {
+      width: 168px;
+      height: 96px;
+      right: 8px;
+      bottom: 8px;
+    }
+    &__logo {
+      display: block;
+
+      &--tech {
+        width: 96px;
+        height: 96px;
+      }
+      &--sk {
+        img {
+          width: 56px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-height: 460px) and (max-width: 1128px) {
+  .preview {
+    &__image {
+      display: none;
     }
   }
 }

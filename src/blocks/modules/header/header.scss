@@ -130,6 +130,9 @@
     &__contacts {
       display: none;
     }
+    &__logo {
+      margin-right: 0;
+    }
     &__button {
       position: relative;
       display: flex;
@@ -137,6 +140,19 @@
       justify-content: center;
       width: 32px;
       height: 32px;
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .header {
+    &__container {
+      padding: 8px 16px;
+    }
+    &__logo {
+      img {
+        height: 32px;
+      }
     }
   }
 }

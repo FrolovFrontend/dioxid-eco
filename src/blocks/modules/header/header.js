@@ -9,15 +9,6 @@ const watch = [];
 const ACTIVE_DESKTOP = "is-active--desktop";
 const ACTIVE_MOBILE = "is-active--mobile";
 
-window.addEventListener("scroll", () => {
-  const scrolled = window.scrollY;
-  const monitorHeight = document.documentElement.clientHeight + headerHeight;
-
-  scrolled >= monitorHeight
-    ? header.classList.remove("scroll")
-    : header.classList.add("scroll");
-});
-
 sections.forEach((section) => {
   const links = navLinks.filter(
     (link) =>
@@ -29,7 +20,7 @@ sections.forEach((section) => {
     const top = section.getBoundingClientRect().top + scrollTop;
     const bottom = top + section.offsetHeight;
     const scrollY = scrollTop + (window.innerHeight / 100) * 50;
-    
+
     if (scrollY >= top && scrollY < bottom) {
       links.forEach((link) => {
         if (link.classList.contains("header__link")) {
@@ -74,3 +65,13 @@ for (let anchor of anchors) {
     });
   });
 }
+
+// поведение синей плашки хедера
+window.addEventListener("scroll", () => {
+  const scrolled = window.scrollY;
+  const monitorHeight = document.documentElement.clientHeight + headerHeight;
+
+  scrolled >= monitorHeight
+    ? header.classList.remove("scroll")
+    : header.classList.add("scroll");
+});

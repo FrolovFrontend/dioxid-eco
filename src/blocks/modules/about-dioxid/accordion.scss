@@ -24,6 +24,7 @@
     @include font-h3;
     text-align: left;
     padding: 24px 35% 24px 32px;
+    margin: 0;
     width: 100%;
     transition: box-shadow 0.2s ease-in-out;
 
@@ -60,7 +61,7 @@
     transition: max-height 0.2s ease-in-out;
   }
   &__content {
-    padding: 8px 24px 32px;
+    padding: 8px 24px 32px 32px;
     max-width: 656px;
   }
 }
