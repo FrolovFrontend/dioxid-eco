@@ -1,3 +1,12 @@
+.form-modal__wrapper .form {
+  &__fields {
+    grid-template-columns: 1fr;
+  }
+  &__inputs {
+    margin-bottom: 24px;
+  }
+}
+
 .form {
   &__fields {
     display: grid;
