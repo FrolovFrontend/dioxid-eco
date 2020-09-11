@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp prod --production",
+    "deploy": "gulp deploy",
     "build:views": "gulp views --production",
     "build:styles": "gulp styles --production",
     "build:scripts": "gulp scripts --production",
@@ -63,6 +64,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "gulp-gh-pages": "^0.5.4",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^6.2.0"
   }
