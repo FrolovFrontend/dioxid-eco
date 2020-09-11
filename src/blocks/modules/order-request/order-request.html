@@ -10,7 +10,7 @@
       class="order-request__form form"
       action="https://formspree.io/xayprzgq"
       method="POST"
-      id="my-form"
+      id="form-request"
     >
       <div class="form__fields">
         <div class="form__inputs">
@@ -23,48 +23,35 @@
               required
             />
             <span class="form__placeholder">Ваше имя*</span>
-            <span class="form__input-error"></span>
           </label>
           <label class="form__input-wrap">
             <input
               class="form__input"
-              id="form-organization"
               type="text"
               name="organization"
               required
             />
             <span class="form__placeholder">Организация*</span>
-            <span class="form__input-error"></span>
           </label>
           <label class="form__input-wrap">
             <input
               class="form__input"
-              id="form-phone"
               type="tel"
               name="phone"
               pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
               required
             />
             <span class="form__placeholder">Телефон*</span>
-            <span class="form__input-error"></span>
           </label>
           <label class="form__input-wrap">
-            <input
-              class="form__input"
-              id="form-mail"
-              type="email"
-              name="_replyto"
-              required
-            />
+            <input class="form__input" type="email" name="_replyto" required />
             <span class="form__placeholder">E-mail*</span>
-            <span class="form__input-error"></span>
           </label>
         </div>
         <label class="form__input-wrap">
           <textarea
             class="form__input form__input--message"
             name="message"
-            id=""
           ></textarea>
           <span class="form__placeholder">Сообщение</span>
         </label>
@@ -72,6 +59,7 @@
 
       <div class="form__file">
         <input
+          class="form__attach-default"
           type="file"
           id="upload-file-request"
           name="upload"
@@ -79,9 +67,25 @@
         />
         <label for="upload-file-request">
           <span class="form__attach">Прикрепить файл</span>
-          <span class="form__attach-files" id="attach-file-request"
-            >Выберите файл</span
-          >
+          <div class="form__attach-block-files">
+            <span class="form__attach-files" id="attach-file-request"
+              >Выберите файл</span
+            >
+            <button class="form__attach-files-delete" id="delete-file-request">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M25.3334 8.54667L23.4534 6.66667L16.0001 14.12L8.54675 6.66667L6.66675 8.54667L14.1201 16L6.66675 23.4533L8.54675 25.3333L16.0001 17.88L23.4534 25.3333L25.3334 23.4533L17.8801 16L25.3334 8.54667Z"
+                  fill="#252525"
+                />
+              </svg>
+            </button>
+          </div>
         </label>
       </div>
 
@@ -98,7 +102,7 @@
         </label>
       </div>
 
-      <button class="form__btn" type="submit" id="my-form-button">
+      <button class="form__btn" type="submit" id="form-request-button">
         Отправить
       </button>
     </form>

@@ -17,42 +17,92 @@
           </svg>
         </button>
       </div>
-      <form class="form-modal__form form" action="#" method="POST">
+      <form
+        class="form-modal__form form"
+        action="https://formspree.io/meqrybpa"
+        method="POST"
+        id="form-consultation"
+      >
         <h3 class="form__heading">Заявка на консультацию</h3>
         <div class="form__fields">
           <div class="form__inputs">
             <label class="form__input-wrap">
-              <input class="form__input" type="text" name="name" required />
+              <input
+                class="form__input"
+                id="form-name"
+                type="text"
+                name="name"
+                required
+              />
               <span class="form__placeholder">Ваше имя*</span>
             </label>
             <label class="form__input-wrap">
-              <input class="form__input" type="text" required />
+              <input
+                class="form__input"
+                type="text"
+                name="organization"
+                required
+              />
               <span class="form__placeholder">Организация*</span>
             </label>
             <label class="form__input-wrap">
-              <input class="form__input" type="text" name="phone" required />
+              <input
+                class="form__input"
+                type="tel"
+                name="phone"
+                pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                required
+              />
               <span class="form__placeholder">Телефон*</span>
             </label>
             <label class="form__input-wrap">
-              <input class="form__input" type="text" name="E-mail" required />
+              <input
+                class="form__input"
+                type="email"
+                name="_replyto"
+                required
+              />
               <span class="form__placeholder">E-mail*</span>
             </label>
           </div>
           <label class="form__input-wrap">
             <textarea
               class="form__input form__input--message"
-              name=""
-              id=""
+              name="message"
             ></textarea>
             <span class="form__placeholder">Сообщение</span>
           </label>
         </div>
 
         <div class="form__file">
-          <input type="file" id="upload-file" />
-          <label for="upload-file">
+          <input
+            class="form__attach-default"
+            type="file"
+            id="file-upload"
+            name="upload"
+            accept=".jpg, .jpeg, .png, .pdf"
+          />
+          <label for="file-upload">
             <span class="form__attach">Прикрепить файл</span>
-            <span class="form__attach-files">Файл не выбран</span>
+            <div class="form__attach-block-files">
+              <span class="form__attach-files" id="file-attach"
+                >Выберите файл</span
+              >
+              <button class="form__attach-files-delete" id="delete-file-consultation">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25.3334 8.54667L23.4534 6.66667L16.0001 14.12L8.54675 6.66667L6.66675 8.54667L14.1201 16L6.66675 23.4533L8.54675 25.3333L16.0001 17.88L23.4534 25.3333L25.3334 23.4533L17.8801 16L25.3334 8.54667Z"
+                    fill="#252525"
+                  />
+                </svg>
+              </button>
+            </div>
           </label>
         </div>
 
@@ -64,7 +114,9 @@
           </label>
         </div>
 
-        <button class="form__btn" type="submit">Отправить</button>
+        <button class="form__btn" type="submit" id="form-consultation-button">
+          Отправить
+        </button>
       </form>
     </div>
   </div>

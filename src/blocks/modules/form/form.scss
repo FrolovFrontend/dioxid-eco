@@ -61,12 +61,15 @@
     }
   }
   &__file {
-    #upload-file,
-    #upload-file-request {
+    .form__attach-default {
       @include visually-hidden;
+    }
+    label {
+      display: flex;
     }
   }
   &__attach {
+    display: inline-block;
     position: relative;
     @include font-tiny;
     padding: 6px 12px 6px 44px;
@@ -92,10 +95,26 @@
       }
     }
   }
+  &__attach-block-files {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+  }
+  &__attach-files-delete {
+    display: none;
+    margin-left: 4px;
+    height: 22px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
   &__attach-files {
     display: inline-block;
     @include font-small;
-    margin-left: 16px;
   }
   &__personal-data {
     margin-top: 40px;
@@ -163,25 +182,10 @@
     @include font-subtitle;
     padding: 14px 40px;
     margin-top: 24px;
-  }
-  &__success,
-  &__error {
-    display: none;
-    margin-top: 32px;
-    padding: 16px 24px;
-    max-width: 400px;
-  }
-  &__success {
-    background-color: rgba($color-brand-accent, $alpha: 0.1);
-    border: 1px solid $color-brand-accent;
-  }
-  &__error {
-    background-color: rgba($color-alert-error, $alpha: 0.1);
-    border: 1px solid $color-alert-error;
-  }
-  &__input-error {
-    @include font-tiny;
-    color: $color-alert-error;
+    &:disabled {
+      cursor: progress;
+      opacity: 0.5;
+    }
   }
 }
 

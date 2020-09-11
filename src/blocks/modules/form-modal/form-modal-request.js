@@ -2,10 +2,10 @@ const body = document.querySelector("body");
 const formSuccessModal = document.querySelector(".form-modal-success");
 const lockPadding = document.querySelector(".header");
 const lockPaddingValue = window.innerWidth - body.offsetWidth + "px";
-const form = document.getElementById("form-request");
-const formFile = document.getElementById("attach-file-request");
+const form = document.getElementById("form-consultation");
+const formFile = document.getElementById("file-attach");
 // const errorMessage = document.getElementById("my-form-error");
-const formBtn = document.getElementById("form-request-button");
+const formBtn = document.getElementById("form-consultation-button");
 
 // Модалка успеха
 const bodyLock = () => {
