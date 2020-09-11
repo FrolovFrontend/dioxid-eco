@@ -61,7 +61,8 @@
     }
   }
   &__file {
-    #upload-file {
+    #upload-file,
+    #upload-file-request {
       @include visually-hidden;
     }
   }
@@ -92,6 +93,7 @@
     }
   }
   &__attach-files {
+    display: inline-block;
     @include font-small;
     margin-left: 16px;
   }
@@ -161,6 +163,25 @@
     @include font-subtitle;
     padding: 14px 40px;
     margin-top: 24px;
+  }
+  &__success,
+  &__error {
+    display: none;
+    margin-top: 32px;
+    padding: 16px 24px;
+    max-width: 400px;
+  }
+  &__success {
+    background-color: rgba($color-brand-accent, $alpha: 0.1);
+    border: 1px solid $color-brand-accent;
+  }
+  &__error {
+    background-color: rgba($color-alert-error, $alpha: 0.1);
+    border: 1px solid $color-alert-error;
+  }
+  &__input-error {
+    @include font-tiny;
+    color: $color-alert-error;
   }
 }
 

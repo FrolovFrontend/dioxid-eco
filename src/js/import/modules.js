@@ -1,6 +1,9 @@
 import "%modules%/header/header";
 import "%modules%/mobile-menu/mobile-menu";
 import "%modules%/form-modal/form-modal";
+import "%modules%/form-modal-success/form-modal-success";
 import "%modules%/about-dioxid/about-dioxid";
 import "%modules%/form/form";
+import "%modules%/order-request/order-request";
+import "%modules%/order-request/order-request-file";
 import "%modules%/about/about";

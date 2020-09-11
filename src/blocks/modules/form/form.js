@@ -1,3 +1,4 @@
+// стили для плейсхолдера
 const fields = document.querySelectorAll(".form__input");
 
 fields.forEach((input) => {
