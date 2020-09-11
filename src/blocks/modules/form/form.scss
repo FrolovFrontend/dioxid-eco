@@ -1,13 +1,7 @@
-.form-modal__wrapper .form {
-  &__fields {
-    grid-template-columns: 1fr;
-  }
-  &__inputs {
-    margin-bottom: 24px;
-  }
-}
-
 .form {
+  &__heading {
+    margin-bottom: 32px;
+  }
   &__fields {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -34,7 +28,7 @@
     color: $color-text-500;
     position: absolute;
     left: 16px;
-    top: 17px;
+    top: 18px;
     transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
   }
   &__input {
@@ -191,6 +185,9 @@
 
 @media all and (max-width: 600px) {
   .form {
+    &__heading {
+      margin-bottom: 24px;
+    }
     &__fields {
       .form__input-wrap {
         margin-bottom: 8px;

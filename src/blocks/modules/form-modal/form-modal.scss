@@ -7,18 +7,85 @@
   left: 0;
   z-index: 200;
   overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out;
+  background-color: rgba($color-bg-dark, $alpha: 0.3);
 
-  &__panel,
   &__wrapper {
-    height: 100%;
+    height: inherit;
   }
   &__panel {
     position: relative;
     background: $color-bg-secondary;
-    width: 624px;
-    min-height: 590px;
+    width: 580px;
+    min-height: 100vh;
     box-shadow: $shadow-modal;
-    // transform: translateX(-100%);
+    transform: translateX(-100%);
     transition: all 0.4s ease-in-out;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px;
+  }
+  &__header {
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 580px;
+    left: 0;
+    top: 0;
+    padding: 16px 24px;
+  }
+
+  &.open-modal {
+    opacity: 1;
+    visibility: visible;
+
+    .form-modal__panel {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  & .form {
+    &__input--message {
+      height: 200px;
+    }
+    &__fields {
+      grid-template-columns: 1fr;
+
+      .form__inputs {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .form-modal {
+    &__panel {
+      width: 100%;
+    }
+    &__wrapper {
+      padding: 64px 16px 40px;
+      width: inherit;
+    }
+    &__header {
+      padding: 8px 16px;
+      background: $color-bg-secondary;
+      width: inherit;
+    }
+    & .form {
+      &__fields {
+        grid-template-columns: 1fr;
+
+        .form__inputs {
+          margin-bottom: 8px;
+        }
+      }
+    }
   }
 }
