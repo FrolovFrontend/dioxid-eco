@@ -4,7 +4,7 @@ import "%modules%/about-dioxid/about-dioxid";
 import "%modules%/form/form";
 import "%modules%/forms/form-request/form-request";
 import "%modules%/forms/form-consultation/form-consultation";
-import "%modules%/form-modal/form-modal";
+import "%modules%/form-modals/form-modals";
 // import "%modules%/form-modal/form-modal-request";
 import "%modules%/form-modal-success/form-modal-success";
 import "%modules%/about/about";

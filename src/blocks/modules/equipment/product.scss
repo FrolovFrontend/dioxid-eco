@@ -78,6 +78,8 @@
   &__btn-request {
     @include button-primary;
     @include font-subtitle;
+    display: flex;
+    justify-content: center;
     width: calc(100% - 32px);
     padding: 14px 16px;
     margin-bottom: 16px;
