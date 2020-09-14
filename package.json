@@ -65,6 +65,7 @@
   },
   "dependencies": {
     "gulp-gh-pages": "^0.5.4",
+    "imask": "^6.0.5",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^6.2.0"
   }

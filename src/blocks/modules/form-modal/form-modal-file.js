@@ -7,7 +7,11 @@ function handleFilesConsultation() {
   const fileList = this.files;
   const file = fileList[0];
 
-  formFile.innerHTML = file.name;
+  if (file) {
+    formFile.innerHTML = file.name;
+  } else {
+    formFile.innerHTML = "Выберите файл";
+  }
 }
 
 uploadInput.addEventListener("change", handleFilesConsultation);
