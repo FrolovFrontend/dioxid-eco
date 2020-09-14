@@ -71,6 +71,10 @@
   padding: 0 32px;
   margin: 0 auto;
 
+  @media all and (min-width: 1700px) {
+    max-width: 1640px;
+  }
+
   @media all and (max-width: 1280px) {
     max-width: 1152px;
   }

@@ -102,8 +102,14 @@
 
 @media all and (min-width: 1700px) {
   .preview {
+    height: auto;
+    min-height: 720px;
+
     &::before {
-      width: 35%;
+      width: 36%;
+    }
+    &__image {
+      height: 600px;
     }
   }
 }
