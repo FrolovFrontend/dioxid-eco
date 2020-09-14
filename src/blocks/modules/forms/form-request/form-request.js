@@ -53,3 +53,19 @@ function ajax(method, url, data, success, error) {
   };
   xhr.send(data);
 }
+
+// кастомное прикрепление файла
+const uploadInput = document.getElementById("upload-file-request");
+const formFiles = document.getElementById("attach-file-request");
+
+function handleFiles() {
+  const fileList = this.files;
+  const file = fileList[0];
+
+  if (file) {
+    formFiles.innerHTML = file.name;
+  } else {
+    formFiles.innerHTML = "Выберите файл";
+  }
+}
+uploadInput.addEventListener("change", handleFiles);

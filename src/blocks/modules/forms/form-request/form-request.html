@@ -1,0 +1,95 @@
+<form
+  class="form"
+  action="https://formspree.io/xayprzgq"
+  method="POST"
+  id="form-request"
+>
+  <div class="form__fields">
+    <div class="form__inputs">
+      <label class="form__input-wrap">
+        <input
+          class="form__input"
+          id="form-name"
+          type="text"
+          name="name"
+          required
+        />
+        <span class="form__placeholder">Ваше имя*</span>
+      </label>
+      <label class="form__input-wrap">
+        <input class="form__input" type="text" name="organization" required />
+        <span class="form__placeholder">Организация*</span>
+      </label>
+      <label class="form__input-wrap">
+        <input
+          class="form__input"
+          type="tel"
+          name="phone"
+          pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+          required
+        />
+        <span class="form__placeholder">Телефон*</span>
+      </label>
+      <label class="form__input-wrap">
+        <input class="form__input" type="email" name="_replyto" required />
+        <span class="form__placeholder">E-mail*</span>
+      </label>
+    </div>
+    <label class="form__input-wrap">
+      <textarea
+        class="form__input form__input--message"
+        name="message"
+      ></textarea>
+      <span class="form__placeholder">Сообщение</span>
+    </label>
+  </div>
+
+  <div class="form__file" id="form_file">
+    <input
+      class="form__attach-default"
+      type="file"
+      id="upload-file-request"
+      name="upload"
+      accept=".jpg, .jpeg, .png, .pdf"
+    />
+    <label for="upload-file-request">
+      <span class="form__attach">Прикрепить файл</span>
+      <div class="form__attach-block-files">
+        <span class="form__attach-files" id="attach-file-request"
+          >Выберите файл</span
+        >
+        <!-- <button class="form__attach-files-delete" id="delete-file-request">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M25.3334 8.54667L23.4534 6.66667L16.0001 14.12L8.54675 6.66667L6.66675 8.54667L14.1201 16L6.66675 23.4533L8.54675 25.3333L16.0001 17.88L23.4534 25.3333L25.3334 23.4533L17.8801 16L25.3334 8.54667Z"
+                  fill="#252525"
+                />
+              </svg>
+            </button> -->
+      </div>
+    </label>
+  </div>
+
+  <div class="form__personal-data">
+    <input
+      class="form__check"
+      type="checkbox"
+      id="personal-data-request"
+      required
+    />
+    <label for="personal-data-request">
+      Cогласие на обработку моих&ensp;
+      <a class="form__personal-link" href="#">персональных данных</a>
+    </label>
+  </div>
+
+  <button class="form__btn" type="submit" id="form-request-button">
+    Отправить
+  </button>
+</form>
